@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ListadoPersonas';
+  ocupacion = "Programadora";
+
+  public mostrarNombre(nombre: String){
+    alert ("El nombre es: " + nombre)
+  }
+  
+  public cambiarOcupacion(){
+    this.ocupacion = "Mesero"
+  }
 }
