@@ -1,12 +1,12 @@
-<H1>Presentación</H1>
+<p-card [style]="{'width': '25rem', 'margin-bottom': '2em'}">
 
-<h3>Nombre: </h3>
-<small>{{nombre}} {{apellido}}</small>
-
-<h3>Bio: </h3>
-<small>{{biografia}}</small>
-
-<h3>Mi ocupacion es :</h3> <small>{{Ocupacion}}</small> <br>
-
-<button (click)="GetNombre()">Get nombre</button>
-<button (click)="resetOcupacion()">Resetear ocupacion</button>
+    <ng-template pTemplate="header">
+        <img src="../../assets/image/WhatsApp Image 2022-04-26 at 9.40.49 PM.jpeg" alt="">
+    </ng-template>
+    <h3>Nombre: {{nombre}} {{apellido}}</h3>
+    <h3>Ocupación: {{Ocupacion}}</h3>
+    <h3>Bio: </h3>
+    <p>
+        {{biografia}}
+    </p>
+</p-card>

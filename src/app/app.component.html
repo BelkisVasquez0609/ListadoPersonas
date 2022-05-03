@@ -1,3 +1,4 @@
+<!--<div class="p-component">
 <app-listado  
     nombre="Belkis Yazmin" 
         (OnGetNombre)="mostrarNombre($event)"
@@ -7,3 +8,16 @@
 ></app-listado>
 
 <button (click)="cambiarOcupacion()">Cambiar Ocupacion</button>
+<button icon="pi pi-check" pButton type="button" label="Click" ></button>
+</div>
+
+<p-card>
+    Content
+</p-card>-->
+
+<app-listado  
+    nombre="Belkis Yazmin" 
+        [(Ocupacion)]="ocupacion"
+    apellido="Vásquez peña"
+    biografia="Nací el 6 de septiembre del 2001 en la provincia de San Pedro de Macoris, actualmente vivo en La Romana, República Dominicana. Estudié en el Colegio Biblico Cristiano y realicé un técnologo en Desarrollo de Software en el ITLA, actualmente soy estudiante de Ing.Software de INTEC y laboro como Desarrolladora Backend en el Innovation Solution Factory de ITLA. "
+></app-listado>
