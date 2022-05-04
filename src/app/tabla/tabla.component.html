@@ -1,0 +1,36 @@
+
+<div class="flex flex-wrap justify-content-around"> 
+
+    <p-table responsiveLayout="scroll" [value]="PersonaClass">
+        <ng-template pTemplate="caption">
+            <div class="flex align-items-center justify-content-between">
+                <h1>Personas</h1>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Ocupación</th>
+                <th>Bio</th>
+                <th>Opción</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-persona >
+            <tr>
+                <td> {{persona.id}}</td>
+                <td> {{persona.nombre}}</td>
+                <td> {{persona.apellido}}</td>
+                <td> {{persona.ocupacion}}</td>
+                <td> {{persona.bio}}</td>
+                <td> <button pButton class="p-button-danger" (click)="eliminar(persona.id)" >Eliminar </button>  <p-toast key="Eliminar"></p-toast></td> 
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="summary">
+            <div class="flex align-items-center justify-content-between">
+             Hay un total de {{ PersonaClass ? PersonaClass.length : 0 }} personas.
+            </div>
+        </ng-template>
+    </p-table>
+    </div>    

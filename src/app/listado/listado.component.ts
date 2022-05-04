@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
+
 @Component({
   selector: 'app-listado',
   templateUrl: './listado.component.html',

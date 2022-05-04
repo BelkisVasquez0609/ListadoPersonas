@@ -1,21 +1,10 @@
-<!--<div class="p-component">
-<app-listado  
-    nombre="Belkis Yazmin" 
-        (OnGetNombre)="mostrarNombre($event)"
-        [(Ocupacion)]="ocupacion"
-    apellido="Vásquez peña"
-    biografia="Nací el 6 de septiembre del 2001 en la provincia de San Pedro de Macoris, actualmente vivo en La Romana, República Dominicana. Estudié en el Colegio Biblico Cristiano y realicé un técnologo en Desarrollo de Software en el ITLA, actualmente soy estudiante de Ing.Software de INTEC y laboro como Desarrolladora Backend en el Innovation Solution Factory de ITLA. "
-></app-listado>
+<br>
+<button pButton class="p-button-outlined p-button-info" (click)="dividirPersona()"> Cortar Listado </button> <p-toast key="Dividir"></p-toast>
 
-<button (click)="cambiarOcupacion()">Cambiar Ocupacion</button>
-<button icon="pi pi-check" pButton type="button" label="Click" ></button>
-</div>
+    <!--Tabla-->
+<app-tabla [PersonaClass] = "personas" (OnEliminar)="eliminar($event)"></app-tabla>
 
-<p-card>
-    Content
-</p-card>-->
-<button (click)="dividirPersona()">
-    Cortar Listado</button>
+<br><br><br><br>
 
 <div class="flex flex-wrap justify-content-around"> 
     <div  *ngFor="let persona of personas">
@@ -30,3 +19,8 @@
     
     </div>
 </div>
+
+
+        
+
+

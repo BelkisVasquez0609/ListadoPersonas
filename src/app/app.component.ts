@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MessageService} from 'primeng/api';
 
 @Component({
   selector: 'app-root',
@@ -191,7 +192,6 @@ export class AppComponent {
     "ocupacion": "Programadora",
     "bio": "duis mattis egestas metus aenean"
   }]
-  
 
   public mostrarNombre(nombre: String){
     alert ("El nombre es: " + nombre)
@@ -203,6 +203,7 @@ export class AppComponent {
 
   public dividirPersona(){
     this.personas.length = 2
+    this.messageService.add({key: 'Dividir',severity:'success', summary:'Dividido correctamente', detail:'Solo se mostrarán 2 personas'});
   }
 
   public eliminar(Id : number){
@@ -210,4 +211,13 @@ export class AppComponent {
     this.personas.splice(index,1);
     console.log(index)
   }
+
+  /**
+   * Mensajes
+   */
+   constructor(private messageService: MessageService) {}
+    clear() {
+        this.messageService.clear();
+    }
+ 
 }
