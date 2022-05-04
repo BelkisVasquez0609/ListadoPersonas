@@ -11,6 +11,8 @@ export class ListadoComponent implements OnInit {
   * On Way Binding de entrada
   */
   @Input()
+  Id : number = 0
+  @Input()
   nombre : string = "Yazmin"
   @Input()
   apellido : string = "Vásquez"
@@ -29,9 +31,16 @@ export class ListadoComponent implements OnInit {
   Ocupacion : string  ="Docente"
   @Output()
   public OcupacionChange: EventEmitter<string> = new EventEmitter();
+  
+  @Output()
+  public OnEliminar : EventEmitter<number> = new EventEmitter<number>();
+  
   constructor() { }
 
   ngOnInit(): void {
+  }
+  eliminar(){
+    this.OnEliminar.emit(this.Id);
   }
 
   public GetNombre(){

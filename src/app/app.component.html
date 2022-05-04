@@ -14,10 +14,19 @@
 <p-card>
     Content
 </p-card>-->
+<button (click)="dividirPersona()">
+    Cortar Listado</button>
 
-<app-listado  
-    nombre="Belkis Yazmin" 
-        [(Ocupacion)]="ocupacion"
-    apellido="Vásquez peña"
-    biografia="Nací el 6 de septiembre del 2001 en la provincia de San Pedro de Macoris, actualmente vivo en La Romana, República Dominicana. Estudié en el Colegio Biblico Cristiano y realicé un técnologo en Desarrollo de Software en el ITLA, actualmente soy estudiante de Ing.Software de INTEC y laboro como Desarrolladora Backend en el Innovation Solution Factory de ITLA. "
-></app-listado>
+<div class="flex flex-wrap justify-content-around"> 
+    <div  *ngFor="let persona of personas">
+        <app-listado  
+        [id] = "persona.id"
+        [nombre] = "persona.nombre"
+        [apellido]="persona.apellido"
+        [Ocupacion]="persona.ocupacion"
+        [biografia]="persona.bio"
+        (OnEliminar)="eliminar($event)"
+        ></app-listado>
+    
+    </div>
+</div>

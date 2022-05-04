@@ -1,12 +1,18 @@
-<p-card [style]="{'width': '25rem', 'margin-bottom': '2em'}">
-
+<p-card header = "Tarjeta de presentación" [style]="{'width': '23rem', 'margin-bottom': '2em'}">
     <ng-template pTemplate="header">
         <img src="../../assets/image/WhatsApp Image 2022-04-26 at 9.40.49 PM.jpeg" alt="">
     </ng-template>
-    <h3>Nombre: {{nombre}} {{apellido}}</h3>
-    <h3>Ocupación: {{Ocupacion}}</h3>
+    <h3>Nombre:</h3> <span>{{nombre}} {{apellido}}</span>
+    <h3>Ocupación: </h3> <span>{{Ocupacion}}</span>
+    <span  *ngIf="Ocupacion ==='Programadora'"> - <i class="pi pi-desktop"></i> </span>
+    <ng-template #iconoDefecto>
+        - <i class="pi pi-user"></i>
+    </ng-template>
     <h3>Bio: </h3>
     <p>
         {{biografia}}
     </p>
+    <button pButton (click)="eliminar()">
+         Eliminar
+    </button>
 </p-card>
